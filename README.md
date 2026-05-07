@@ -2,7 +2,7 @@
 
 > Transforme seus pontos em mobilidade sustentável — Desafio 2 | FIAP Front-End Design Engineering 2026
 
-🔗 **Repositório:** [github.com/enzoleiva2008-blip/fiap-](https://github.com/enzoleiva2008-blip/fiap-)
+🔗 **Repositório:** [https://github.com/MatheuSegura/Challenge-2026-1TDPX](https://github.com/MatheuSegura/Challenge-2026-1TDPX)
 
 ---
 
