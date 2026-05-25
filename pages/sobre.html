@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sobre o Pointway — Contexto, problema, solução proposta e tecnologias utilizadas no projeto FIAP 2026." />
   <title>Sobre — Pointway</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
+  <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 <body>
 
- 
   <header class="navbar" id="navbar">
     <div class="container">
       <nav class="nav">
-        <a href="index.html" class="nav-logo"><img src="assets/images/logo.svg" alt="Pointway" height="38" /></a>
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.svg" alt="Pointway" height="38" /></a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="../index.html" class="nav-link">Início</a></li>
           <li><a href="sobre.html" class="nav-link">Sobre</a></li>
           <li><a href="solucao.html" class="nav-link">Plataforma</a></li>
           <li><a href="transporte.html" class="nav-link">Transporte</a></li>
@@ -34,11 +31,10 @@
 
   <main>
 
-   
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Navegação estrutural">
-          <a href="index.html">Início</a>
+          <a href="../index.html">Início</a>
           <span class="breadcrumb-sep">›</span>
           <span>Sobre</span>
         </nav>
@@ -47,13 +43,12 @@
       </div>
     </section>
 
-    
     <section class="section" id="prospera">
       <div class="container">
         <div class="about-grid">
           <div class="about-text fade-in-left">
             <span class="badge badge-primary">Empresa parceira</span>
-            <h2 style="margin-top: 1rem;">A Prospera &amp; a Pointway</h2>
+            <h2 class="info-box-margin mt-1">A Prospera &amp; a Pointway</h2>
             <div class="divider divider-left"></div>
             <p>A <strong>Prospera</strong> é uma empresa brasileira focada em sustentabilidade que utiliza tecnologia para promover consumo consciente e geração de impacto positivo no meio ambiente.</p>
             <p>Em 2025, a Prospera adquiriu a startup <strong>SoulPrime</strong>, incorporando sua tecnologia e comunidade ao ecossistema digital, dando origem à plataforma <strong>Pointway</strong>.</p>
@@ -63,7 +58,7 @@
             </div>
           </div>
           <div class="fade-in-right">
-            <div class="card" style="margin-bottom: 1.5rem;">
+            <div class="card card-margin-bottom">
               <div class="card-icon icon-primary">🌱</div>
               <h3 class="card-title">Missão da Pointway</h3>
               <p class="card-text">Transformar interações digitais em benefícios reais para os usuários e impacto positivo para o meio ambiente, conectando o mundo digital ao mundo físico de forma sustentável.</p>
@@ -71,7 +66,7 @@
             <div class="card">
               <div class="card-icon icon-accent">⭐</div>
               <h3 class="card-title">Benefícios da plataforma</h3>
-              <ul style="color: var(--gray); font-size: 0.93rem; line-height: 2; padding-left: 1.25rem; list-style: disc;">
+              <ul class="list-gray-custom">
                 <li>Descontos na fatura de energia elétrica</li>
                 <li>Créditos para transporte público</li>
                 <li>Experiências sustentáveis exclusivas</li>
@@ -83,7 +78,6 @@
       </div>
     </section>
 
-    
     <section class="section bg-light" id="desafio">
       <div class="container">
         <div class="section-header fade-in">
@@ -94,12 +88,12 @@
         </div>
         <div class="about-grid">
           <div class="fade-in-left">
-            <h3 style="margin-bottom: 1rem;">O Contexto</h3>
-            <p style="color: var(--gray-dark); line-height: 1.8;">O <strong>transporte público</strong> é um dos principais meios de redução de emissão de carbono nas cidades. Ao mesmo tempo, a Pointway busca conectar o ambiente digital com benefícios reais no mundo físico.</p>
-            <p style="color: var(--gray-dark); line-height: 1.8;">O Desafio 2 propõe uma solução que permita que usuários utilizem seus <strong>pontos Pointway</strong> para financiar, total ou parcialmente, o uso de transporte público — através de vouchers digitais ou integração com sistemas de bilhetagem existentes.</p>
+            <h3 class="subtitle-margin mb-1">O Contexto</h3>
+            <p class="text-dark-spaced">O <strong>transporte público</strong> é um dos principais meios de redução de emissão de carbono nas cidades. Ao mesmo tempo, a Pointway busca conectar o ambiente digital com benefícios reais no mundo físico.</p>
+            <p class="text-dark-spaced">O Desafio 2 propõe uma solução que permita que usuários utilizem seus <strong>pontos Pointway</strong> para financiar, total ou parcialmente, o uso de transporte público — através de vouchers digitais ou integração com sistemas de bilhetagem existentes.</p>
             <div class="warning-box">
               <p>⚠️ <strong>Perguntas centrais do desafio:</strong></p>
-              <ul style="color: var(--gray-dark); font-size: 0.9rem; line-height: 2; margin-top: 0.5rem; padding-left: 1.25rem; list-style: disc;">
+              <ul class="list-dark-custom">
                 <li>Como converter pontos em créditos de transporte?</li>
                 <li>Como integrar com sistemas de bilhetagem?</li>
                 <li>Como evitar fraudes no processo?</li>
@@ -108,27 +102,25 @@
             </div>
           </div>
           <div class="fade-in-right">
-            <h3 style="margin-bottom: 1rem;">Nossa Resposta</h3>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div class="card" style="padding: 1.5rem;">
-                <strong style="color: var(--primary);">🔄 Conversão transparente</strong>
-                <p class="card-text" style="margin-top: 0.5rem;">Taxa fixa de conversão: 150 pontos = 1 viagem de ônibus. Visualização clara do saldo e das possibilidades.</p>
+            <h3 class="subtitle-margin mb-1">Nossa Resposta</h3>
+            <div class="flex-column-gap">
+              <div class="card card-padding-custom">
+                <strong class="strong-primary">🔄 Conversão transparente</strong>
+                <p class="card-text card-text-margin">Taxa fixa de conversão: 150 pontos = 1 viagem de ônibus. Visualização clara do saldo e das possibilidades.</p>
               </div>
-              <div class="card" style="padding: 1.5rem;">
-                <strong style="color: var(--secondary);">🎫 Voucher digital</strong>
-                <p class="card-text" style="margin-top: 0.5rem;">QR Code único, gerado no app, com validade de 24h e vinculado ao CPF do usuário para evitar fraudes.</p>
+              <div class="card card-padding-custom">
+                <strong class="strong-secondary">🎫 Voucher digital</strong>
+                <p class="card-text card-text-margin">QR Code único, gerado no app, com validade de 24h e vinculado ao CPF do usuário para evitar fraudes.</p>
               </div>
-              <div class="card" style="padding: 1.5rem;">
-                <strong style="color: var(--accent);">📊 Impacto mensurado</strong>
-                <p class="card-text" style="margin-top: 0.5rem;">Cada viagem registra CO₂ evitado, quilômetros percorridos e equivalência em árvores plantadas.</p>
+              <div class="card card-padding-custom">
+                <strong class="strong-accent">📊 Impacto mensurado</strong>
+                <p class="card-text card-text-margin">Cada viagem registra CO₂ evitado, quilômetros percorridos e equivalência em árvores plantadas.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    
     <section class="section">
       <div class="container">
         <div class="section-header fade-in">
@@ -137,31 +129,31 @@
           <div class="divider"></div>
           <p class="section-desc">Desenvolvido com tecnologias web puras, sem frameworks externos — conforme as diretrizes da FIAP.</p>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <div class="cards-grid-3">
           <article class="card text-center fade-in">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🌐</div>
+            <div class="card-icon-xlarge">🌐</div>
             <h4>HTML5</h4>
             <p class="card-text">Estrutura semântica com tags apropriadas: header, nav, main, section, article, footer.</p>
-            <div class="tech-list" style="justify-content: center;">
+            <div class="tech-list tech-list-centered">
               <span class="tech-tag">Semântico</span>
               <span class="tech-tag">Acessível</span>
             </div>
           </article>
-          <article class="card text-center fade-in" style="transition-delay: 0.1s;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+          <article class="card text-center fade-in delay-1">
+            <div class="card-icon-xlarge">🎨</div>
             <h4>CSS3</h4>
             <p class="card-text">Variáveis CSS, Flexbox, Grid Layout, animações, media queries e design responsivo.</p>
-            <div class="tech-list" style="justify-content: center;">
+            <div class="tech-list tech-list-centered">
               <span class="tech-tag">Flexbox</span>
               <span class="tech-tag">Grid</span>
               <span class="tech-tag">Responsivo</span>
             </div>
           </article>
-          <article class="card text-center fade-in" style="transition-delay: 0.2s;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+          <article class="card text-center fade-in delay-2">
+            <div class="card-icon-xlarge">⚡</div>
             <h4>JavaScript</h4>
             <p class="card-text">Vanilla JS: manipulação do DOM, eventos, validação de formulário, animações e simulador interativo.</p>
-            <div class="tech-list" style="justify-content: center;">
+            <div class="tech-list tech-list-centered">
               <span class="tech-tag">Vanilla JS</span>
               <span class="tech-tag">ES6+</span>
             </div>
@@ -170,7 +162,6 @@
       </div>
     </section>
 
-   
     <section class="section bg-light" id="roadmap">
       <div class="container">
         <div class="section-header fade-in">
@@ -179,7 +170,7 @@
           <div class="divider"></div>
           <p class="section-desc">Como o Pointway Transit evolui ao longo do semestre.</p>
         </div>
-        <div class="roadmap" style="max-width: 600px; margin: 0 auto;" id="roadmap">
+        <div class="roadmap roadmap-centered" id="roadmap">
           <div class="roadmap-item fade-in">
             <div class="roadmap-dot done">✅</div>
             <div class="roadmap-content">
@@ -218,7 +209,6 @@
 
   </main>
 
-  
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -229,7 +219,7 @@
         <div>
           <h4 class="footer-title">Navegação</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
+            <li><a href="../index.html">Início</a></li>
             <li><a href="sobre.html">Sobre o Projeto</a></li>
             <li><a href="solucao.html">A Plataforma</a></li>
             <li><a href="transporte.html">Transporte</a></li>
@@ -261,6 +251,6 @@
   </footer>
 
   <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

@@ -5,160 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="A Plataforma Pointway — Como funciona o sistema de pontos, categorias de atividades e programa de recompensas." />
   <title>A Plataforma — Pointway</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <style>
-    
-    .platform-hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .points-display {
-      background: linear-gradient(135deg, var(--secondary), #0a1f40);
-      border-radius: var(--radius-xl);
-      padding: 2rem;
-      color: var(--white);
-      text-align: center;
-    }
-
-    .points-display .points-value {
-      font-family: var(--font-heading);
-      font-size: 4rem;
-      font-weight: 800;
-      color: var(--primary-light);
-      line-height: 1;
-    }
-
-    .points-display .points-label {
-      font-size: 0.9rem;
-      opacity: 0.75;
-      margin-top: 0.25rem;
-    }
-
-    .points-progress {
-      background: rgba(255,255,255,0.12);
-      border-radius: var(--radius-full);
-      height: 8px;
-      margin: 1.5rem 0 0.5rem;
-      overflow: hidden;
-    }
-
-    .points-progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg, var(--primary-light), var(--accent-light));
-      border-radius: var(--radius-full);
-      width: 68%;
-    }
-
-    .points-next {
-      font-size: 0.82rem;
-      opacity: 0.7;
-      text-align: right;
-    }
-
-    .points-mini-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-
-    .points-mini-card {
-      background: rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding: 0.875rem;
-      text-align: center;
-    }
-
-    .points-mini-card .mini-val {
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--primary-light);
-    }
-
-    .points-mini-card .mini-lbl {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      margin-top: 0.2rem;
-    }
-
-    /* Tabs */
-    .tabs-nav {
-      display: flex;
-      gap: 0.5rem;
-      border-bottom: 2px solid var(--gray-light);
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      padding: 0.75rem 1.25rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--gray);
-      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-      transition: var(--transition);
-      cursor: pointer;
-      background: none;
-      border: none;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-    }
-
-    .tab-btn:hover { color: var(--primary); }
-    .tab-btn.active {
-      color: var(--primary);
-      border-bottom-color: var(--primary);
-      background-color: var(--primary-bg);
-    }
-
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-
-    .partner-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .partner-card {
-      border: 2px solid var(--gray-light);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      text-align: center;
-      transition: var(--transition);
-    }
-
-    .partner-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
-    .partner-card .partner-icon { font-size: 2.5rem; margin-bottom: 0.875rem; }
-    .partner-card h4 { margin-bottom: 0.375rem; }
-    .partner-card p { color: var(--gray); font-size: 0.88rem; }
-
-    @media (max-width: 768px) {
-      .platform-hero-grid { grid-template-columns: 1fr; }
-      .partner-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 480px) {
-      .partner-grid { grid-template-columns: 1fr; }
-      .points-display .points-value { font-size: 3rem; }
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 <body>
 
-  
   <header class="navbar" id="navbar">
     <div class="container">
       <nav class="nav">
-        <a href="index.html" class="nav-logo"><img src="assets/images/logo.svg" alt="Pointway" height="38" /></a>
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.svg" alt="Pointway" height="38" /></a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="../index.html" class="nav-link">Início</a></li>
           <li><a href="sobre.html" class="nav-link">Sobre</a></li>
           <li><a href="solucao.html" class="nav-link">Plataforma</a></li>
           <li><a href="transporte.html" class="nav-link">Transporte</a></li>
@@ -178,7 +34,7 @@
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Navegação estrutural">
-          <a href="index.html">Início</a>
+          <a href="../index.html">Início</a>
           <span class="breadcrumb-sep">›</span>
           <span>A Plataforma</span>
         </nav>
@@ -192,19 +48,18 @@
         <div class="platform-hero-grid">
           <div class="fade-in-left">
             <span class="badge badge-primary">Como funciona</span>
-            <h2 style="margin-top: 1rem;">O ecossistema de pontos Pointway</h2>
+            <h2 class="info-box-margin mt-1">O ecossistema de pontos Pointway</h2>
             <div class="divider divider-left"></div>
-            <p style="color: var(--gray-dark); line-height: 1.8;">A Pointway funciona como uma rede de engajamento sustentável. Ao realizar atividades dentro do aplicativo, o usuário acumula pontos que fazem parte de um programa de recompensas integrado.</p>
-            <p style="color: var(--gray-dark); line-height: 1.8;">Esses pontos incentivam comportamentos conscientes e são convertidos em benefícios reais — como créditos de transporte público, descontos em energia e experiências sustentáveis.</p>
-            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <p class="text-dark-spaced">A Pointway funciona como uma rede de engajamento sustentável. Ao realizar atividades dentro do aplicativo, o usuário acumula pontos que fazem parte de um programa de recompensas integrado.</p>
+            <p class="text-dark-spaced">Esses pontos incentivam comportamentos conscientes e são convertidos em benefícios reais — como créditos de transporte público, descontos em energia e experiências sustentáveis.</p>
+            <div class="flex-gap-responsive">
               <a href="transporte.html" class="btn btn-primary">Usar no transporte →</a>
               <a href="#categorias" class="btn btn-outline">Ver categorias</a>
             </div>
           </div>
           <div class="fade-in-right">
-            <!-- Mockup do app -->
             <div class="points-display">
-              <p style="font-size: 0.82rem; opacity: 0.7; margin-bottom: 0.5rem;">Seu saldo Pointway</p>
+              <p class="text-small-opacity">Seu saldo Pointway</p>
               <div class="points-value">4.200</div>
               <div class="points-label">pontos disponíveis</div>
               <div class="points-progress">
@@ -247,32 +102,32 @@
           <article class="earn-card fade-in">
             <span class="points-badge">📚 +50 pts por artigo</span>
             <h4>Consumo de conteúdo</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Leia artigos sobre sustentabilidade, assista vídeos educativos e complete cursos na plataforma.</p>
+            <p class="text-small-gray">Leia artigos sobre sustentabilidade, assista vídeos educativos e complete cursos na plataforma.</p>
           </article>
-          <article class="earn-card fade-in" style="transition-delay: 0.05s;">
+          <article class="earn-card fade-in delay-05">
             <span class="points-badge">💬 +30 pts por interação</span>
             <h4>Engajamento comunitário</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Comente, compartilhe e participe de discussões nas comunidades Pointway.</p>
+            <p class="text-small-gray">Comente, compartilhe e participe de discussões nas comunidades Pointway.</p>
           </article>
-          <article class="earn-card fade-in" style="transition-delay: 0.1s;">
+          <article class="earn-card fade-in delay-1">
             <span class="points-badge">🚌 +200 pts por viagem</span>
             <h4>Use transporte público</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Registre suas viagens de ônibus, metrô ou trem no app e ganhe pontos bônus por cada deslocamento.</p>
+            <p class="text-small-gray">Registre suas viagens de ônibus, metrô ou trem no app e ganhe pontos bônus por cada deslocamento.</p>
           </article>
-          <article class="earn-card fade-in" style="transition-delay: 0.15s;">
+          <article class="earn-card fade-in delay-15">
             <span class="points-badge">♻️ +100 pts por ação</span>
             <h4>Ações sustentáveis</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Registre reciclagem, consumo de energia renovável e outras ações verdes verificáveis.</p>
+            <p class="text-small-gray">Registre reciclagem, consumo de energia renovável e outras ações verdes verificáveis.</p>
           </article>
-          <article class="earn-card fade-in" style="transition-delay: 0.2s;">
+          <article class="earn-card fade-in delay-2">
             <span class="points-badge">👥 +500 pts por indicação</span>
             <h4>Indicação de amigos</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Convide amigos para a plataforma e ganhe pontos bônus quando eles completarem o cadastro.</p>
+            <p class="text-small-gray">Convide amigos para a plataforma e ganhe pontos bônus quando eles completarem o cadastro.</p>
           </article>
-          <article class="earn-card fade-in" style="transition-delay: 0.25s;">
+          <article class="earn-card fade-in delay-25">
             <span class="points-badge">🎯 +Variável por desafio</span>
             <h4>Desafios semanais</h4>
-            <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.7;">Complete desafios temáticos semanais com missões relacionadas à sustentabilidade e mobilidade.</p>
+            <p class="text-small-gray">Complete desafios temáticos semanais com missões relacionadas à sustentabilidade e mobilidade.</p>
           </article>
         </div>
       </div>
@@ -294,23 +149,23 @@
           </div>
 
           <div class="tab-content active" id="tab-transporte" role="tabpanel">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div class="grid-2-cols">
               <div>
                 <h3>Créditos de Transporte Público</h3>
-                <p style="color: var(--gray-dark); line-height: 1.8; margin-top: 0.75rem;">Use seus pontos para financiar viagens de ônibus, metrô, trem e BRT. É a recompensa mais popular da plataforma, com alta adesão e impacto ambiental direto.</p>
-                <ul style="color: var(--gray-dark); font-size: 0.93rem; line-height: 2.2; margin-top: 1rem; padding-left: 1.5rem; list-style: disc;">
+                <p class="text-margin-top-small">Use seus pontos para financiar viagens de ônibus, metrô, trem e BRT. É a recompensa mais popular da plataforma, com alta adesão e impacto ambiental direto.</p>
+                <ul class="list-margin-top">
                   <li><strong>Ônibus:</strong> 150 pontos = 1 viagem</li>
                   <li><strong>Metrô / Trem:</strong> 250 pontos = 1 viagem</li>
                   <li><strong>BRT / Monotrilho:</strong> 180 pontos = 1 viagem</li>
                 </ul>
-                <a href="transporte.html" class="btn btn-primary" style="margin-top: 1.5rem;">Simular conversão →</a>
+                <a href="transporte.html" class="btn btn-primary btn-margin-custom">Simular conversão →</a>
               </div>
               <div class="highlight-box">
-                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.5rem;">🏆 Recompensa mais popular</p>
-                <div class="stat-number" style="color: var(--white); font-size: 2.5rem;">68%</div>
-                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 0.375rem;">dos usuários escolhem transporte como primeiro resgate</p>
-                <hr style="border-color: rgba(255,255,255,0.2); margin: 1.25rem 0;" />
-                <p style="font-size: 0.88rem; opacity: 0.8;">Impacto: <strong style="color: var(--white);">0,089 kg CO₂</strong> evitado por viagem de ônibus substituída.</p>
+                <p class="text-xsmall-opacity">🏆 Recompensa mais popular</p>
+                <div class="stat-number stat-number-white-large">68%</div>
+                <p class="text-white-opacity">dos usuários escolhem transporte como primeiro resgate</p>
+                <hr / class="divider-white-opacity">
+                <p class="text-small-white-opacity">Impacto: <strong class="strong-white">0,089 kg CO₂</strong> evitado por viagem de ônibus substituída.</p>
               </div>
             </div>
           </div>
@@ -319,7 +174,7 @@
             <div class="info-box">
               <p>⚡ <strong>Em breve:</strong> Integração com a fatura de energia elétrica. Use seus pontos para obter desconto direto na conta de luz.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.5rem;">
+            <div class="grid-3-cols-small">
               <div class="card">
                 <div class="card-icon icon-accent">💡</div>
                 <h4 class="card-title">Desconto na fatura</h4>
@@ -339,7 +194,7 @@
           </div>
 
           <div class="tab-content" id="tab-experiencias" role="tabpanel">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
+            <div class="grid-3-cols">
               <div class="card">
                 <div class="card-icon icon-primary">🌳</div>
                 <h4 class="card-title">Plantio de árvores</h4>
@@ -388,19 +243,19 @@
           <h2>Regras do programa de pontos</h2>
           <div class="divider"></div>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <div class="cards-grid-3">
           <article class="card text-center fade-in">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📅</div>
+            <div class="card-icon-xxlarge">📅</div>
             <h4>Validade</h4>
             <p class="card-text">Pontos expiram em <strong>12 meses</strong> sem uso. O resgate renova o prazo do saldo restante.</p>
           </article>
-          <article class="card text-center fade-in" style="transition-delay: 0.1s;">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔢</div>
+          <article class="card text-center fade-in delay-1">
+            <div class="card-icon-xxlarge">🔢</div>
             <h4>Mínimo para resgate</h4>
             <p class="card-text">É necessário ter no mínimo <strong>150 pontos</strong> para realizar qualquer resgate de transporte.</p>
           </article>
-          <article class="card text-center fade-in" style="transition-delay: 0.2s;">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔒</div>
+          <article class="card text-center fade-in delay-2">
+            <div class="card-icon-xxlarge">🔒</div>
             <h4>Não transferíveis</h4>
             <p class="card-text">Os pontos são pessoais e intransferíveis, vinculados ao CPF do usuário cadastrado.</p>
           </article>
@@ -431,7 +286,7 @@
         <div>
           <h4 class="footer-title">Navegação</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
+            <li><a href="../index.html">Início</a></li>
             <li><a href="sobre.html">Sobre o Projeto</a></li>
             <li><a href="solucao.html">A Plataforma</a></li>
             <li><a href="transporte.html">Transporte</a></li>
@@ -463,7 +318,7 @@
   </footer>
 
   <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
-  <script src="js/main.js"></script>
-  <script src="js/transporte.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/transporte.js"></script>
 </body>
 </html>
