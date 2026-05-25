@@ -5,109 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Equipe Pointway — Conheça os integrantes do grupo responsável pelo projeto FIAP 2026." />
   <title>Equipe — Pointway</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <style>
-    /*
-      ============================================================
-      ATENÇÃO — PREENCHA OS DADOS REAIS DO SEU GRUPO AQUI
-      Substitua os placeholders por nome, RM, turma, GitHub e
-      LinkedIn de cada integrante. Adicione ou remova cards
-      conforme o número de pessoas no grupo.
-      ============================================================
-    */
-
-    .team-section-intro {
-      max-width: 680px;
-      margin: 0 auto 3.5rem;
-      text-align: center;
-    }
-
-    .turma-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--primary-bg);
-      color: var(--primary);
-      padding: 0.5rem 1.25rem;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Foto placeholder com iniciais */
-    .team-initials {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--white);
-      border-radius: 50%;
-    }
-
-    /* Cores alternadas para os avatares */
-    .avatar-blue .team-initials {
-      background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
-    }
-    .avatar-amber .team-initials {
-      background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    }
-    .avatar-teal .team-initials {
-      background: linear-gradient(135deg, #0d9488, #14b8a6);
-    }
-
-    .team-role {
-      font-size: 0.8rem;
-      color: var(--gray);
-      margin-bottom: 0.875rem;
-      font-style: italic;
-    }
-
-    .about-project-card {
-      background: linear-gradient(135deg, var(--secondary), #0a1f40);
-      color: var(--white);
-      border-radius: var(--radius-xl);
-      padding: 3rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .about-project-card h3 { color: var(--white); margin-bottom: 1rem; }
-    .about-project-card p { color: rgba(255,255,255,0.8); line-height: 1.8; }
-
-    .project-meta {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-    .meta-item { text-align: center; }
-    .meta-val {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-light);
-    }
-    .meta-lbl { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; }
-  </style>
-</head>
+  <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 <body>
 
-  <!-- ==================== NAVBAR ==================== -->
   <header class="navbar" id="navbar">
     <div class="container">
       <nav class="nav">
-        <a href="index.html" class="nav-logo"><img src="assets/images/logo.svg" alt="Pointway" height="38" /></a>
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.svg" alt="Pointway" height="38" /></a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="../index.html" class="nav-link">Início</a></li>
           <li><a href="sobre.html" class="nav-link">Sobre</a></li>
           <li><a href="solucao.html" class="nav-link">Plataforma</a></li>
           <li><a href="transporte.html" class="nav-link">Transporte</a></li>
@@ -124,11 +31,10 @@
 
   <main>
 
-    <!-- ==================== HERO DA PÁGINA ==================== -->
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Navegação estrutural">
-          <a href="index.html">Início</a>
+          <a href="../index.html">Início</a>
           <span class="breadcrumb-sep">›</span>
           <span>Equipe</span>
         </nav>
@@ -137,22 +43,19 @@
       </div>
     </section>
 
-    <!-- ==================== INTEGRANTES ==================== -->
     <section class="section">
       <div class="container">
 
         <div class="team-section-intro fade-in">
-          <!-- ATENÇÃO: substitua pelo nome real da turma -->
-          <div class="turma-badge">🎓 Turma: SUBSTITUA AQUI</div>
-          <p style="color: var(--gray); line-height: 1.75;">
+          <div class="turma-badge">🎓 Turma: 1TDSPX</div>
+          <p class="text-spaced">
             Grupo desenvolvedor do projeto <strong>Pointway Transit</strong> para o Challenge FIAP 2026,
             Desafio 2 — Utilização de Pontos para Transporte Público, em parceria com a empresa Prospera/Pointway.
           </p>
         </div>
 
-        <div class="team-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="team-grid team-grid-3">
 
-          <!-- Enzo Leiva Varrichio -->
           <article class="team-card fade-in">
             <div class="team-photo-wrapper">
               <div class="team-initials">EL</div>
@@ -171,8 +74,7 @@
             </div>
           </article>
 
-          <!-- Pietro Ibra -->
-          <article class="team-card fade-in" style="transition-delay: 0.1s;">
+          <article class="team-card fade-in delay-1">
             <div class="team-photo-wrapper avatar-blue">
               <div class="team-initials">PI</div>
             </div>
@@ -190,8 +92,7 @@
             </div>
           </article>
 
-          <!-- Kauã Augusto Fiuza -->
-          <article class="team-card fade-in" style="transition-delay: 0.2s;">
+          <article class="team-card fade-in delay-2">
             <div class="team-photo-wrapper avatar-amber">
               <div class="team-initials">KA</div>
             </div>
@@ -209,8 +110,7 @@
             </div>
           </article>
 
-          <!-- Bernardo Andrade -->
-          <article class="team-card fade-in" style="transition-delay: 0.3s;">
+          <article class="team-card fade-in delay-3">
             <div class="team-photo-wrapper avatar-teal">
               <div class="team-initials">BA</div>
             </div>
@@ -228,8 +128,7 @@
             </div>
           </article>
 
-          <!-- Matheus Segura Anacleto de Souza -->
-          <article class="team-card fade-in" style="transition-delay: 0.4s;">
+          <article class="team-card fade-in delay-4">
             <div class="team-photo-wrapper avatar-blue">
               <div class="team-initials">MS</div>
             </div>
@@ -247,24 +146,21 @@
             </div>
           </article>
 
-          <!-- (espaço reservado para grid 3x2) -->
-          <div style="visibility: hidden;" aria-hidden="true"></div>
-
+          <div aria-hidden="true" class="invisible-grid-item"></div>
 
         </div>
       </div>
     </section>
 
-    <!-- ==================== SOBRE O PROJETO ==================== -->
     <section class="section bg-light">
       <div class="container">
         <div class="about-project-card fade-in">
-          <span class="badge badge-white" style="margin-bottom: 1.25rem; display: inline-flex;">🏆 FIAP Challenge 2026</span>
+          <span class="badge badge-white badge-inline-flex">🏆 FIAP Challenge 2026</span>
           <h3>Sobre o Projeto Pointway Transit</h3>
           <p>
-            Desenvolvido como entrega do <strong style="color: var(--primary-light);">1º Sprint</strong> da disciplina de
-            Front-End Design Engineering da FIAP, em parceria com a empresa <strong style="color: var(--primary-light);">Prospera / Pointway</strong>.
-            O grupo escolheu o <strong style="color: var(--primary-light);">Desafio 2</strong> — Utilização de Pontos para Transporte Público —
+            Desenvolvido como entrega do <strong class="text-primary-strong">1º Sprint</strong> da disciplina de
+            Front-End Design Engineering da FIAP, em parceria com a empresa <strong class="text-primary-strong">Prospera / Pointway</strong>.
+            O grupo escolheu o <strong class="text-primary-strong">Desafio 2</strong> — Utilização de Pontos para Transporte Público —
             propondo uma solução completa para conversão de pontos em créditos de mobilidade urbana sustentável.
           </p>
           <div class="project-meta">
@@ -285,10 +181,10 @@
               <div class="meta-lbl">responsivo</div>
             </div>
           </div>
-          <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <div class="centered-buttons">
             <a href="sobre.html" class="btn btn-outline-white">Ver sobre o projeto</a>
-            <!-- ATENÇÃO: substitua pelo link real do repositório no GitHub -->
-            <a href="https://github.com/enzoleiva2008-blip/fiap-" target="_blank" rel="noopener" class="btn btn-primary">🐙 Ver repositório</a>
+
+            <a href="https://github.com/MatheuSegura/Challenge-2026-1TDPX" target="_blank" rel="noopener" class="btn btn-primary">🐙 Ver repositório</a>
           </div>
         </div>
       </div>
@@ -296,7 +192,6 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -307,7 +202,7 @@
         <div>
           <h4 class="footer-title">Navegação</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
+            <li><a href="../index.html">Início</a></li>
             <li><a href="sobre.html">Sobre o Projeto</a></li>
             <li><a href="solucao.html">A Plataforma</a></li>
             <li><a href="transporte.html">Transporte</a></li>
@@ -339,6 +234,6 @@
   </footer>
 
   <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
