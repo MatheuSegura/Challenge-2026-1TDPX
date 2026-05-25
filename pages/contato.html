@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com a equipe Pointway — Dúvidas, sugestões e parcerias." />
+  <title>Contato — Pointway</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/inline-styles.css" />
+  <link rel="stylesheet" href="../css/contato.css" />
+  
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.svg" alt="Pointway" height="38" /></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="solucao.html" class="nav-link">Plataforma</a></li>
+          <li><a href="transporte.html" class="nav-link">Transporte</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+          <li><a href="integrantes.html" class="nav-link">Equipe</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO DA PÁGINA ==================== -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Navegação estrutural">
+          <a href="../index.html">Início</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Contato</span>
+        </nav>
+        <h1>Entre em Contato</h1>
+        <p>Tem dúvidas, sugestões ou quer saber mais sobre o projeto? Nossa equipe está aqui para ajudar.</p>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Informações de contato -->
+          <aside>
+            <h3>Fale com a equipe</h3>
+            <p>Respondemos todas as mensagens em até 2 dias úteis. Para dúvidas rápidas, confira também nosso <a href="faq.html" class="faq-link">FAQ</a>.</p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon">📧</div>
+                <div class="contact-item-text">
+                  <p>E-mail</p>
+                  <strong>pointway@fiap.com.br</strong>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">🏫</div>
+                <div class="contact-item-text">
+                  <p>Instituição</p>
+                  <strong>FIAP — São Paulo, SP</strong>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📅</div>
+                <div class="contact-item-text">
+                  <p>Disponibilidade</p>
+                  <strong>Seg–Sex, das 9h às 18h</strong>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">🎓</div>
+                <div class="contact-item-text">
+                  <p>Turma</p>
+                  <strong>1TDSPX</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Links sociais -->
+            <div class="social-links">
+              <a href="integrantes.html" class="social-link">
+                <span>👥</span> Ver equipe
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener" class="social-link">
+                <!-- ATENÇÃO: substitua pelo link real do repositório -->
+                <span>🐙</span> GitHub
+              </a>
+            </div>
+
+          </aside>
+
+          <!-- Formulário -->
+          <div>
+            <div class="contact-form-card fade-in">
+              <h3 class="form-header-title">Envie sua mensagem</h3>
+              <p class="form-header-subtitle">Todos os campos marcados com <span class="required-asterisk">*</span> são obrigatórios.</p>
+
+              <!-- Formulário principal -->
+              <form id="contactForm" novalidate>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nome">Nome completo <span>*</span></label>
+                    <input
+                      type="text"
+                      id="nome"
+                      class="form-control"
+                      placeholder="Seu nome"
+                      autocomplete="name"
+                      aria-required="true"
+                      aria-describedby="nomeError"
+                    />
+                    <span class="form-error" id="nomeError" role="alert"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-mail <span>*</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="seu@email.com"
+                      autocomplete="email"
+                      aria-required="true"
+                      aria-describedby="emailError"
+                    />
+                    <span class="form-error" id="emailError" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="assunto">Assunto <span>*</span></label>
+                  <select
+                    id="assunto"
+                    class="form-control"
+                    aria-required="true"
+                    aria-describedby="assuntoError"
+                  >
+                    <option value="">Selecione um assunto...</option>
+                    <option value="duvida">Dúvida sobre o projeto</option>
+                    <option value="transporte">Transporte e conversão de pontos</option>
+                    <option value="tecnico">Suporte técnico</option>
+                    <option value="parceria">Proposta de parceria</option>
+                    <option value="imprensa">Imprensa e divulgação</option>
+                    <option value="outro">Outro assunto</option>
+                  </select>
+                  <span class="form-error" id="assuntoError" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="mensagem">Mensagem <span>*</span></label>
+                  <textarea
+                    id="mensagem"
+                    class="form-control"
+                    placeholder="Descreva sua dúvida ou sugestão com detalhes (mínimo 20 caracteres)..."
+                    rows="5"
+                    aria-required="true"
+                    aria-describedby="mensagemError"
+                    maxlength="1000"
+                  ></textarea>
+                  <span class="form-error" id="mensagemError" role="alert"></span>
+                  <p class="char-counter"><span id="charCount">0</span>/1000 caracteres</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit-full">
+                  Enviar mensagem
+                </button>
+
+              </form>
+
+              <!-- Mensagem de sucesso -->
+              <div class="form-success-msg" id="formSuccess" role="alert">
+                <div class="success-icon">✅</div>
+                <h4>Mensagem enviada com sucesso!</h4>
+                <p>Obrigado pelo contato. Nossa equipe responderá em até 2 dias úteis no e-mail informado.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ RÁPIDO ==================== -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Dúvidas rápidas</h2>
+          <div class="divider"></div>
+          <p class="section-desc">Antes de enviar, veja se sua dúvida já está respondida aqui.</p>
+        </div>
+        <div class="cards-grid-3">
+          <article class="card text-center fade-in">
+            <div class="card-icon-large">🔄</div>
+            <h4>Como converter pontos?</h4>
+            <p class="card-text">Acesse o app Pointway → Recompensas → Transporte Público.</p>
+            <a href="faq.html" class="btn btn-sm btn-outline info-box-margin mt-1">Ver detalhes</a>
+          </article>
+          <article class="card text-center fade-in delay-1">
+            <div class="card-icon-large">🚌</div>
+            <h4>Quais linhas aceitam?</h4>
+            <p class="card-text">SPTrans, ViaMobilidade e CPTM em São Paulo.</p>
+            <a href="transporte.html" class="btn btn-sm btn-outline info-box-margin mt-1">Simular</a>
+          </article>
+          <article class="card text-center fade-in delay-2">
+            <div class="card-icon-large">🔐</div>
+            <h4>É seguro usar pontos?</h4>
+            <p class="card-text">Sim! Token único + biometria + IA anti-fraude.</p>
+            <a href="faq.html" class="btn btn-sm btn-outline info-box-margin mt-1">Saiba mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Pointway</span>
+          <p>Transformando interações digitais em mobilidade sustentável. Projeto desenvolvido para o Desafio 2 — FIAP Front-End Design Engineering 2026.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o Projeto</a></li>
+            <li><a href="solucao.html">A Plataforma</a></li>
+            <li><a href="transporte.html">Transporte</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Recursos</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Nossa Equipe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Challenge</h4>
+          <ul class="footer-links">
+            <li><a href="sobre.html#desafio">Desafio 2 — Pointway</a></li>
+            <li><a href="sobre.html#prospera">Sobre a Prospera</a></li>
+            <li><a href="sobre.html#roadmap">Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pointway. Desenvolvido para FIAP — Front-End Design Engineering.</p>
+        <p>Desafio 2 — Transporte Público Sustentável 🌱</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
+  <script src="../js/main.js"></script>
+  <script src="../js/contato.js"></script>
+</body>
+</html>
