@@ -1,68 +1,20 @@
 # Pointway 🚌🌱
 
-> Transforme seus pontos em mobilidade sustentável — Desafio 2 | FIAP Front-End Design Engineering 2026
+> Transforme seus pontos em mobilidade sustentável — Desafio 2 | FIAP Front-End Design Engineering 2026 | Sprint 3
 
-🔗 **Repositório:** [https://github.com/MatheuSegura/Challenge-2026-1TDPX](https://github.com/MatheuSegura/Challenge-2026-1TDPX)
+## 📋 Título e Descrição
 
----
-
-## 📋 Descrição do Projeto
-
-O **Pointway** é uma solução desenvolvida para o **Desafio 2** do Challenge FIAP 2026, em parceria com a empresa **Prospera/Pointway**.
+O **Pointway** é uma Single Page Application desenvolvida em **React + Vite + TypeScript** para o **Desafio 2** do Challenge FIAP 2026, em parceria com a empresa **Prospera/Pointway**.
 
 A proposta resolve o problema: *Como permitir que usuários utilizem seus pontos Pointway para financiar o uso de transporte público?*
 
 A solução apresenta:
-- **Simulador interativo** de conversão de pontos em viagens
-- **Sistema de voucher digital** com QR Code para uso nas catracas
-- **Integração via API** com operadoras como SPTrans, ViaMobilidade e CPTM
+- **Simulador interativo** de conversão de pontos em viagens (React state + hooks)
+- **Sistema de voucher digital** com QR Code mockado para uso nas catracas
+- **Explicação dos modelos de integração** com operadoras como SPTrans, ViaMobilidade e CPTM
 - **Calculadora de impacto ambiental** coletivo
-- **Sistema anti-fraude** multicamada
-
----
-
-## 🎯 O Desafio
-
-**Desafio 2 — Utilização de Pontos para Transporte Público**
-
-A Pointway busca conectar o ambiente digital com benefícios reais no mundo físico. O transporte público é um dos principais meios de redução de emissão de carbono, tornando-se uma oportunidade de impacto sustentável.
-
-**Questões respondidas pelo projeto:**
-- Como converter pontos em créditos de transporte?
-- Como integrar com sistemas de bilhetagem?
-- Como evitar fraudes no processo?
-- Como medir o impacto ambiental gerado?
-
----
-
-## 🗂️ Estrutura de Pastas
-
-```
-projeto-soulup/
-│
-├── index.html          # Página inicial — apresentação do projeto
-├── sobre.html          # Sobre o projeto, contexto e roadmap
-├── solucao.html        # A plataforma Pointway e sistema de pontos
-├── transporte.html     # Desafio 2 — simulador e modelos de integração
-├── faq.html            # Perguntas frequentes com busca e accordion
-├── contato.html        # Formulário de contato com validação
-├── integrantes.html    # Equipe do projeto
-├── README.md           # Este arquivo
-│
-├── css/
-│   ├── style.css       # Variáveis, reset, tipografia e utilitários
-│   ├── components.css  # Navbar, hero, cards, FAQ, formulário, equipe
-│   └── responsive.css  # Media queries (mobile, tablet, desktop)
-│
-├── js/
-│   ├── main.js         # Navbar, hamburger, scroll, animações
-│   ├── faq.js          # Accordion e busca do FAQ
-│   ├── contato.js      # Validação do formulário de contato
-│   └── transporte.js   # Simulador de pontos e calculadora de impacto
-│
-└── assets/
-    └── images/         # Imagens, ícones e mídias do projeto
-```
+- **Perfis dinâmicos da equipe**, navegáveis por rota (`/integrantes/:id`)
+- **Categorias de recompensas navegáveis por rota** (`/plataforma/:categoria`)
 
 ---
 
@@ -70,67 +22,117 @@ projeto-soulup/
 
 | Tecnologia | Uso |
 |---|---|
-| **HTML5** | Estrutura semântica das páginas |
-| **CSS3** | Estilização, Flexbox, Grid, variáveis CSS, animações |
-| **JavaScript (ES6+)** | Interatividade, simulador, validação, accordion |
-| **Google Fonts** | Tipografias Poppins e Inter |
+| **React 19** | Componentização e interface declarativa |
+| **Vite** | Build e servidor de desenvolvimento |
+| **TypeScript** | Tipagem estática em todo o projeto |
+| **Tailwind CSS v4** | Estilização utilitária e responsiva |
+| **React Router DOM** | Navegação SPA, rotas estáticas e dinâmicas |
+| **React Hook Form** | Formulário de contato com validação |
 | **Git / GitHub** | Versionamento e controle de código |
 
-> ⚠️ **Sem frameworks externos.** Nenhuma biblioteca como Bootstrap, jQuery, React ou Tailwind foi utilizada, conforme as diretrizes da FIAP.
+> ⚠️ Sem bibliotecas de UI (Bootstrap, Material UI, Chakra UI), sem Axios/requisições HTTP e sem templates prontos — conforme as diretrizes da Sprint 3 da FIAP.
 
 ---
 
-## 📄 Páginas do Projeto
+## 🗂️ Estrutura de Pastas
 
-| Página | Arquivo | Descrição |
+```
+Pointway/
+│
+├── index.html                # HTML raiz da SPA
+├── public/
+│   ├── logo.svg               # Favicon / logo público
+│   └── assets/images/         # Imagens públicas do projeto
+│
+├── src/
+│   ├── main.tsx                # Ponto de entrada (BrowserRouter)
+│   ├── App.tsx                 # Definição de todas as rotas
+│   ├── index.css               # Tailwind + tema de cores da marca
+│   │
+│   ├── components/             # Componentes reutilizáveis
+│   │   ├── Layout.tsx, Header.tsx, Footer.tsx
+│   │   ├── Button.tsx, Badge.tsx, Card.tsx, SectionHeader.tsx
+│   │   ├── Tabs.tsx, TeamCard.tsx, FaqAccordionItem.tsx
+│   │   ├── Simulator.tsx, ImpactCalculator.tsx
+│   │   └── ScrollTopButton.tsx, StatCounter.tsx
+│   │
+│   ├── pages/                  # Páginas / rotas da aplicação
+│   │   ├── Home.tsx, Sobre.tsx, Plataforma.tsx, Transporte.tsx
+│   │   ├── Faq.tsx, Contato.tsx
+│   │   ├── Integrantes.tsx, IntegranteDetalhe.tsx
+│   │   └── NotFound.tsx
+│   │
+│   ├── data/                   # Dados estáticos tipados (equipe, FAQ, transporte)
+│   ├── types/                  # Interfaces e tipos TypeScript
+│   └── hooks/                  # Hooks customizados (useFadeIn, useScrollPosition)
+│
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
+## ▶️ Como Usar
+
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) 18+ e npm instalados
+
+### Instalação e execução local
+
+```bash
+# Clonar o repositório
+git clone https://github.com/MatheuSegura/Challenge-2026-1TDPX.git
+cd Challenge-2026-1TDPX
+
+# Instalar as dependências
+npm install
+
+# Rodar em modo de desenvolvimento
+npm run dev
+
+# Gerar build de produção
+npm run build
+```
+
+A aplicação abre por padrão em `http://localhost:5173`.
+
+### Links do projeto
+- 🔗 **Repositório GitHub:** [https://github.com/MatheuSegura/Challenge-2026-1TDPX](https://github.com/MatheuSegura/Challenge-2026-1TDPX)
+- 🎬 **Vídeo de apresentação (YouTube):** _a adicionar_
+
+---
+
+## 📄 Páginas da Aplicação
+
+| Página | Rota | Descrição |
 |---|---|---|
-| Início | `index.html` | Hero, como funciona, stats, features e CTA |
-| Sobre | `sobre.html` | Contexto, problema, solução e roadmap |
-| Plataforma | `solucao.html` | Como ganhar pontos, recompensas e parceiros |
-| **Transporte** | `transporte.html` | **Simulador, voucher, integração e impacto** |
-| FAQ | `faq.html` | Perguntas frequentes com busca e accordion |
-| Contato | `contato.html` | Formulário com validação JavaScript |
-| Equipe | `integrantes.html` | Integrantes com RM, GitHub e LinkedIn |
+| Início | `/` | Hero, como funciona, stats e funcionalidades |
+| Sobre | `/sobre` | Contexto, problema, solução e roadmap |
+| Plataforma | `/plataforma/:categoria` | Sistema de pontos e recompensas (rota dinâmica por categoria) |
+| Transporte | `/transporte` | Simulador de conversão e calculadora de impacto |
+| FAQ | `/faq` | Perguntas frequentes com busca e accordion |
+| Contato | `/contato` | Formulário com React Hook Form |
+| Equipe | `/integrantes` | Lista da equipe |
+| Perfil do integrante | `/integrantes/:id` | Rota dinâmica com detalhes de cada integrante |
 
 ---
 
-## ⚡ Funcionalidades JavaScript
+## 🖼️ Imagens e Ícones do Projeto
 
-- **Navbar responsiva** com hamburger menu e scroll suave
-- **Animações de entrada** (fade-in ao rolar a página)
-- **Contador animado** de estatísticas
-- **Simulador de pontos** em tempo real (escolha de modal, cálculo instantâneo)
-- **Calculadora de impacto ambiental** coletivo
-- **Tabs interativas** (integração técnica, recompensas)
-- **Accordion do FAQ** com abertura suave e busca por palavra-chave
-- **Validação de formulário** com feedback visual em tempo real
-- **Scroll-to-top** dinâmico
+O projeto utiliza o logotipo oficial da marca (`public/assets/images/logo.svg`) no cabeçalho e favicon, além de emojis temáticos (🚌 🌱 🎫 🔐) como iconografia leve em cards, badges e seções, mantendo a identidade visual consistente em toda a aplicação.
 
 ---
 
-## 📱 Responsividade
+## 👥 Autores e Créditos
 
-| Breakpoint | Dispositivo | Status |
-|---|---|---|
-| ≤ 480px | Mobile pequeno | ✅ |
-| ≤ 768px | Mobile / Tablet | ✅ |
-| 768px–992px | Tablet | ✅ |
-| ≥ 992px | Desktop | ✅ |
-| ≥ 1300px | Desktop grande | ✅ |
+| Foto | Nome | RM | Turma | LinkedIn | GitHub |
+|---|---|---|---|---|---|
+| 🟢 EL | Enzo Leiva Varrichio | RM568877 | 1TDSPO | [LinkedIn](https://www.linkedin.com/in/enzo-leiva-varrichio-88ba273a1/) | [GitHub](https://github.com/enzoleiva2008-blip) |
+| 🟡 KA | Kauã Augusto Fiuza | RM572369 | 1TDSPO | [LinkedIn](https://www.linkedin.com/in/kau%C3%A3-fiuza-94a039313/) | [GitHub](https://github.com/KauaznX) |
+| 🔵 MS | Matheus Segura Anacleto de Souza | RM570878 | 1TDSPO | [LinkedIn](https://www.linkedin.com/in/matheussegura/) | [GitHub](https://github.com/MatheuSegura) |
 
----
-
-## 👥 Equipe
-
-<!-- ATENÇÃO: substitua pelos dados reais de cada integrante -->
-
-| Nome | RM | Turma | GitHub |
-|---|---|---|---|
-| Enzo Leiva Varrichio | RM568877 | 1TDSPO | [github.com/enzoleiva2008-blip](https://github.com/enzoleiva2008-blip) |
-| Pietro Ibra | RM573262 | 1TDSPO | [github.com/PietroIbra](https://github.com/PietroIbra) |
-| Kauã Augusto Fiuza | RM572369 | 1TDSPO | [github.com/KauaznX](https://github.com/KauaznX) |
-| Bernardo Andrade | RM571170 | 1TDSPO | [github.com/bernardopqr-cpu](https://github.com/bernardopqr-cpu) |
-| Matheus Segura Anacleto de Souza | RM570878 | 1TDSPO | [github.com/MatheuSegura](https://github.com/MatheuSegura) |
+_As iniciais coloridas exibidas no site (`/integrantes`) substituem fotos reais; para usar fotos, adicione os arquivos em `public/assets/images/team/` e referencie via o campo `photo` em `src/data/team.ts`._
 
 ---
 
@@ -139,13 +141,13 @@ projeto-soulup/
 - **E-mail:** pointway@fiap.com.br
 - **Instituição:** FIAP — São Paulo, SP
 - **Disciplina:** Front-End Design Engineering
-- **Semestre:** 1º Sprint — 2026
+- **Turma:** 1TDSPO — Sprint 3, 2026
 
 ---
 
 ## 📜 Licença
 
-Projeto acadêmico desenvolvido para fins educacionais como parte do Challenge FIAP 2026 em parceria com a Prospera/Pointway. Todos os direitos reservados à equipe desenvolvedora.
+Projeto acadêmico desenvolvido para fins educacionais como parte do Challenge FIAP 2026, em parceria com a Prospera/Pointway. Todos os direitos reservados à equipe desenvolvedora.
 
 ---
 
